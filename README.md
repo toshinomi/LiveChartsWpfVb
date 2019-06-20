@@ -1,3 +1,5 @@
+# LiveChartsWpfVb
+
 # 概要
 LiveChartsグラフライブラリを使用したVisual Basic.NET WPFのサンプルプログラムです。  
 画像ファイルを読み込み、RGBのヒストグラムを表示しています。
