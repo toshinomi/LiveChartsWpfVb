@@ -4,7 +4,7 @@ Imports System.Runtime.InteropServices.Marshal
 
 Class MainWindow
 
-    Private m_nHistgram(256) As Integer
+    Private m_nHistgram(255) As Integer
 
     Public Sub New()
 
@@ -41,7 +41,7 @@ Class MainWindow
         Dim graphData = New GraphData()
 
         Dim chartValue = New ChartValues(Of Integer)()
-        For nIdx As Integer = 0 To 256
+        For nIdx As Integer = 0 To m_nHistgram.Length - 1
             m_nHistgram(nIdx) = 0
             chartValue.Add(m_nHistgram(nIdx))
         Next nIdx
@@ -70,7 +70,7 @@ Class MainWindow
         CalHistgram(_bitmap)
 
         Dim chartValue = New ChartValues(Of Integer)()
-        For nIdx As Integer = 0 To 256
+        For nIdx As Integer = 0 To m_nHistgram.Length - 1
             chartValue.Add(m_nHistgram(nIdx))
         Next nIdx
 
@@ -114,7 +114,7 @@ Class MainWindow
     End Sub
 
     Public Sub InitHistgram()
-        For nIdx As Integer = 0 To 256
+        For nIdx As Integer = 0 To m_nHistgram.Length - 1
             m_nHistgram(nIdx) = 0
         Next nIdx
     End Sub
